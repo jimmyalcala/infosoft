@@ -68,6 +68,7 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.messages.middleware.MessageMiddleware',
     # Uncomment the next line for simple clickjacking protection:
     # 'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'debug_toolbar.middleware.DebugToolbarMiddleware',
 )
 
 ROOT_URLCONF = 'infosoft.urls'
@@ -96,8 +97,11 @@ INSTALLED_APPS = (
     'clientes',
     'south',
     'django_geoip',
+    'debug_toolbar',
+    'smart_selects',
 )
 
+INTERCEPT_REDIRECTS = False
 # A sample logging configuration. The only tangible logging
 # performed by this configuration is to send an email to
 # the site admins on every HTTP 500 error when DEBUG=False.
